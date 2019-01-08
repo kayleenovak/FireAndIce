@@ -1,4 +1,3 @@
-import React from 'react'
 import { housesReducer } from './housesReducer.js'
 
 describe('housesReducer', () => {
