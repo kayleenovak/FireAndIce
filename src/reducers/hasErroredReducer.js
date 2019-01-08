@@ -1,4 +1,4 @@
-export const hasErroredReducer = (state = false, action.check) => {
+export const hasErroredReducer = (state = false, action) => {
   switch (action.type) {
     case 'HAS_ERRORED':
       return action.check
