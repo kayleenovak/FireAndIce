@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Card } from '../../components/Card/Card.js'
+import './CardContainer.css'
 
 export class CardContainer extends Component {
   
@@ -12,15 +13,15 @@ export class CardContainer extends Component {
   }
 
   render() {
-    if(this.props.houses) {
+    if(this.props.houses.length) {
       const houseCards = this.displayHouseCards()
       return (
-        <section>
+        <section className='card-container'>
           {houseCards}
         </section>
       )
     } else if (this.props.isLoading === true) {
-      return <div>Loading...</div>
+      return <img src='./wolf.gif' className='wolf-img' />
     } else {
       return <div>Error</div>
     }
