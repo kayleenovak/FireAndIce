@@ -8,7 +8,7 @@ export const isLoading = (check) => ({
   check
 })
 
-export const dataFetchSuccess = (houses) => ({
+export const fetchDataSuccess = (houses) => ({
   type: 'DATA_FETCH_SUCCESS',
   houses
 })

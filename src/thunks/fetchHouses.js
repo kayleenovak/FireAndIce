@@ -1,9 +1,9 @@
 import { hasErrored, isLoading, fetchDataSuccess } from '../actions/index.js'
 
-export const fetchData = () => {
+export const fetchHouses = () => {
   return async (dispatch) => {
     try {
-      isLoading(true)
+      dispatch(isLoading(true))
       const response = await fetch('http://localhost:3001/api/v1/houses')
       if(!response.ok) {
         throw Error(response.statusText)
@@ -12,7 +12,7 @@ export const fetchData = () => {
       dispatch(isLoading(false))
       dispatch(fetchDataSuccess(houses))
     } catch (error) {
-      hasErrored(true)
+      dispatch(hasErrored(true))
     }
   }
 }
