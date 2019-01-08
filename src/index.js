@@ -4,6 +4,13 @@ import ReactDOM from 'react-dom';
 import App from './components/App/App.js';
 import registerServiceWorker from './registerServiceWorker';
 
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(rootReducer, devTools)
+
+const wrapper = <Provider store={store}>
+                  <App />
+                </Provider>
+
+ReactDOM.render(wrapper, document.getElementById('root'));
 registerServiceWorker();
