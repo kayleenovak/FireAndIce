@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux'
 import { fetchHouses } from '../../thunks/fetchHouses.js'
+import CardContainer from '../../containers/CardContainer/CardContainer.js'
 
 export class App extends Component {
 
@@ -18,6 +19,7 @@ export class App extends Component {
           <h2>Welcome to Westeros</h2>
         </div>
         <div className='Display-info'>
+          <CardContainer />
         </div>
       </div>
     );
