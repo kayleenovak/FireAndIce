@@ -1,5 +1,6 @@
 .card-container {
-  display: flex; 
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .wolf-img {
